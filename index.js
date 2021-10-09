@@ -1,5 +1,5 @@
 let userName = prompt("what is your name?");
-console.log(userName);
+let starLight = "You are a Star !!";
 
 document.addEventListener('DOMContentLoaded', () => {
   const cardArray=[
@@ -87,7 +87,7 @@ const grid =document.querySelector(".grid");
      }
 
      else if (cardSelected[0] === cardSelected[1]){
-        alert(`${userName} Good match`);
+        alert(`${userName}, Good match`);
          cards[optionOneId].setAttribute("src", "/media/white.jpg");
          cards[optionTwoId].setAttribute("src", "/media/white.jpg");
          cards[optionOneId].removeEventListener("click", flipCard)
@@ -102,9 +102,10 @@ const grid =document.querySelector(".grid");
      };
      cardSelected = [];
      cardsSelectedId = [];
-     myDisplay.textContent = cardsWon.length;
+     myDisplay.textContent = (`Score: ${cardsWon.length}`);
      if(cardsWon.length === cardArray.length/2){
-         myDisplay.textContent ="You are a star!!! you found all";
+        myDisplay.textContent = (`${starLight} 
+        ${userName}, you found all.`);
      };
  }
  function flipCard(){
