@@ -1,5 +1,14 @@
 let userName = prompt("what is your name?");
+alert(` Hello ${userName}, welcome to the memory game.
+The entire card will be revealed for few seconds afterwhich it will be overlaid.
+You have to flip over a card and another till you get a match.
+If there is a match; you have a point.
+If the next card you flip does not match, a pop up alert notifies you of this and the cards flip back
+The game continues until you match all the cards on the board.
+Upon completion you get an alert that declares you a star. `)
+
 let starLight = "You are a Star !!";
+const backColor= document.querySelector(".star-light");
 
 document.addEventListener('DOMContentLoaded', () => {
   const cardArray=[
@@ -80,6 +89,12 @@ const grid =document.querySelector(".grid");
      const optionTwoId = cardsSelectedId[1];
      let alertMe = ["Mismatch", "Try again", "really, try harder!", "the foodie, make a good choice", "Sorry, try again"];
      let feedBack = alertMe[Math.floor(Math.random() * alertMe.length)];
+     let R= [Math.floor(Math.random() * 255)+1];
+     let G= [Math.floor(Math.random() * 255)+1];
+     let B= [Math.floor(Math.random() * 255)+1];
+     const randomNumb =`rgb(${R}, ${G}, ${B})`;
+    // backColor.style.backgroundColor= randomNumb;
+    backColor.style.borderColor= randomNumb;
      if(optionOneId == optionTwoId){
          cards[optionOneId].setAttribute('src', 'images/blank.png')
          cards[optionTwoId].setAttribute('src', 'images/blank.png')
