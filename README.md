@@ -12,3 +12,5 @@ This was built using HTML, CSS, JavaScript.
 Math.random(), prompt(), alert(), sort(), createElement(), setAttribute(), 
 
 addEventListener(), appendChild(), removeEventListener(), getAttribute(), .push().
+
+https://card-flip-memory-game.netlify.app/
